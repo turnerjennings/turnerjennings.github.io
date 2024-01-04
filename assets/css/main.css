@@ -26,18 +26,10 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, section {
+footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-nav {
-	display:none;
-}
 
-@media screen and (max-width:767px) {
-	nav{
-		display: block;
-	}
-}
 
 body {
 	line-height: 1;
@@ -3206,6 +3198,7 @@ input, select, textarea {
 				}
 
 		#header .main {
+			display:none;
 			height: inherit;
 			line-height: inherit;
 			text-align: right;
@@ -3305,6 +3298,12 @@ input, select, textarea {
 
 		}
 
+		@media screen and (min-width: 736px) {
+			#header .main {
+				display: none;
+			}
+		}
+
 		@media screen and (max-width: 736px) {
 
 			#header {
@@ -3315,10 +3314,12 @@ input, select, textarea {
 				#header h1 {
 					padding: 0 0 0 1em;
 				}
+			
+			#header .main {
+				display: block;
+			}
 
-				#header .main .search {
-					display: none;
-				}
+
 
 		}
 
