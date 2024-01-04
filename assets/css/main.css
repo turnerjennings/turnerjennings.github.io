@@ -1808,9 +1808,8 @@ input, select, textarea {
 		}
 
 		.author img {
-			border-radius: 100%;
 			display: block;
-			width: 4em;
+			width: 8em;
 		}
 
 		.author:hover .name {
@@ -3419,7 +3418,7 @@ input, select, textarea {
 		margin: 0 0 1em 0;
 		overflow: hidden;
 		position: relative;
-		width: 4em;
+		width: 10em;
 	}
 
 		#intro .logo:before {
@@ -3439,7 +3438,7 @@ input, select, textarea {
 		#intro .logo img {
 			display: block;
 			margin-left: -0.25em;
-			width: 4.5em;
+			width: 10em;
 		}
 
 	#intro header h2 {
