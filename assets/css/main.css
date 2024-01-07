@@ -2300,7 +2300,7 @@ input, select, textarea {
 		}
 
 			.image.left img, .image.right img {
-				width: 100%;
+				width: 90%;
 			}
 
 		.image.left {
@@ -2314,6 +2314,13 @@ input, select, textarea {
 			float: right;
 			padding: 0 0 1em 1.5em;
 			top: 0.25em;
+		}
+
+		.image.center {
+			display: block;
+			margin-left:auto;
+			margin-right:auto;
+			text-align:center;
 		}
 
 		.image.fit {
