@@ -3644,9 +3644,29 @@ input, select, textarea {
 			float: left;
 			width: 10%;
 		  }
+		  .columnicon {
+			float: left;
+			width: 7%;
+		  }
 		  .column30 {
 			float: left;
 			width: 30%;
+		  }
+		.column70 {
+			float: left;
+			width: 70%;
+		  }
+		.column65 {
+			float: left;
+			width: 65%;
+		  }
+		.column100 {
+			float: left;
+			width: 100%;
+		  }
+		.column20 {
+			float: left;
+			width: 20%;
 		  }
 		  
 		  /* Clear floats after the columns */
