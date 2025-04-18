@@ -3660,6 +3660,7 @@ input, select, textarea {
 			float: left;
 			width: 65%;
 			line-height: normal;
+			padding: 20px;
 		  }
 		.column100 {
 			float: left;
