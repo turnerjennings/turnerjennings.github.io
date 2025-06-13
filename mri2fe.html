@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Aorta Imaging Fixture | Turner Jennings</title>
+		<title>MRI2FE | Turner Jennings</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -74,10 +74,13 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<br><br>
-										<h2>Aorta multiphoton imaging fixture</h2>
+										
+										<h2>MRI2FE</h2>
+										<h3>Automated generation of patient-specific FE head models from medical imaging data.</h3>
+										<a href="https://github.com/turnerjennings/MRI2FE" class="button">Github Repo</a>
+
 									</div>
-									<span class="image center"><img src="images/biax.jpg" alt="biaxial fixture" width="360"/><br></span>
+									<span class="image center"><img src="images/head.png" alt="Heated Sample Bath" width="360"/><br></span>
 								</header>
 								<!--	
 								</header>
@@ -91,56 +94,40 @@
 									</div>
 								</div>
 							-->
-							
 							<div>
-
-
 								<h3>Objective and outcomes</h3>
-								<p>
-									The objective of this design was to create a fixture capable of generating physiologically relevant axial stretch and radial pressure in
-									a cannulated sample of a murine thoracic aorta during two-photon microscopy imaging.  The fixture enables imaging of the cell nuclei and extracellular
-									matrix of the blood vessel walls under loading conditions close to those experienced in the murine body.  The system was used by my colleague 
-									<a href="https://www.linkedin.com/in/ana-vargas-9b75aa13b/to">Ana Vargas</a> to examine microstructure changes in the cardiovascular extracellular matrix during and after pregnancy.
-								</p>
-								<p>This system enabled the <b>collection of first-of-its-kind data</b> showing how the maternal cardiovascular system adapts to changing loads during pregnancy.
-									Data collected using this test system was published in the ASME Journal of Biomechanical engineering.  This project highlights my ability to <b>design and manufacture </b> equipment with <b>complex, scientifically driven constraints </b>.
-								</p>
-								<p><a href="https://doi.org/10.1115/1.4064744" class="button">View Paper</a></p>
-								
-								
+								<p>The objective of this software project was to develop a tool capable of automated generation of finite element models of the head using medical imaging data.  While meshing tools already exist
+									that are capable of generating a finite element mesh from medical images, the objective of this toolset was to create a system capable of also integrating material property data measured using 
+									magnetic resonance elastography.  By integrating both patient specific tissue geometry and material properties, this tool enables the user to generate the highest-fidelity patient-specific
+									mechanical modes of the head to date.
 
+								</p>
+								<p>This package highlights my ability to develop <b>scientific software</b> integrating the user-friendliness of python with the performance of c++.
+								</p>
 							</div>
+
+							
 							<div class="image-center">
-								<img src="images/multiphoton_wide.png" alt="Biaxial loading device overview" width="480">
-								<br>
-								<p><em>System overview</em></p>
+								<img src="images/methods.png" class="image center" width="640">
+								<p><em>Example workflow for patient-specific model generation</em></p>
 							</div>
 							
-
 							<div>
-								<h3>System requirements</h3>
 
-								<ul>
-									<li>The fixture fits within size constraints of the two-photon microscope</li>
-									<li>The sample must remain submerged in Saline during imaging</li>
-									<li>The fixture must be capable of 3DOF sample manipulation (axial stretch, radial pressure, and rotation for imaging the dorsal and ventral aorta wall)</li>
-									<li>The cannula must remain aligned during testing to prevent generation of shear or torsion</li>
-								</ul>
-							</div>
-
-							<div>
-							<span class="image left"><img src="images/biaxfinecontrol.png" alt="biaxial fixture" width="100"/><br><em>Needle alignment fine control</em></span>
-							
-							<h3>Key features</h3>
+								
+								<h3>Key features</h3>
 							<ul>
-								<li>Axial extension is achieved by mounting one needle on a spring loaded stage controlled by a vernier caliper.  The vessel is pressurized
-									through the needles via a pressure-controlled syringe pump.
+								<li>
+									The package is built using computationally efficient tools such as <a href="https://github.com/ANTsX/ANTs">ANTs</a> 
+									for MRI processing and <a href="https://www.cgal.org/">CGAL</a> for meshing.
 								</li>
-								<li>Alignment was achieved using a two-screw adjustment system on a cantilever arm.  Adjusting both screws simultaneously changes the vertical
-									needle position while moving one screw relative to the other changes the angle of the arm, enabling horizontal adjust.</li>  
-								<li>Luer locks are mounted to sealed bearings to facilitate sample rotation.  The bearing housings are designed for ease of replacement
-									as the bearings rust in the saline solution.</li>
-								<li>All parts were machined out of aluminum due to the risk of autoflourescence in polymers and painted to prevent laser scatter hazards.</li>
+								<li>
+									The package uses C++ for computationally intensive operations, bound to python helper functions for ease-of-use.
+								</li>
+								<li>
+									The package also enables the mapping of results from FE analyses back onto the MRI geometry, enhancing the clinical translation of FE results.
+								</li>
+
 							
 							</ul>
 							</div>

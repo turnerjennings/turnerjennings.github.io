@@ -2317,10 +2317,19 @@ input, select, textarea {
 		}
 
 		.image.center {
-			display: block;
 			margin-left:auto;
 			margin-right:auto;
 			text-align:center;
+		}
+
+		.image-center img {
+			display: block;
+			margin: 0 auto;
+		}
+
+		.image-center p {
+			text-align: center;
+			margin: 0;
 		}
 
 		.image.fit {
